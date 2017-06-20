@@ -1,6 +1,6 @@
 # Associative Embedding: End-to-End Learning for Joint Detection and Grouping
 
-This repository includes Tensorflow code for running multi-person pose estimiation algorithm presented in:
+This repository includes Tensorflow code for running the multi-person pose estimiation algorithm presented in:
 
 Alejandro Newell, Zhiao Huang, and Jia Deng, 
 **Associative Embedding: End-to-End Learning for Joint Detection and Grouping**, 
