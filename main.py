@@ -42,12 +42,13 @@ def parse_args():
     #which_args = argparse.ArgumentParser()
     parser.add_argument('-m', '--model_path', type=str, default='multiperson', help='multiperson model path')
     parser.add_argument('-r', '--refine_model_path', type=str, default=None, help='refinement model path', choices=[None, 'refinement'])
+    parser.add_argument('--scales', type=str, default='single', help='switch for multi-scale evaluation', choices=['multi', 'single'])
 
-    parser.add_argument('-i', '--input_image_path', type=str, help='input image\'s name')
-    parser.add_argument('-l', '--imglist', type=str, default=None, help='A file contains the images\' path')
-    parser.add_argument('--scales', type=str, help='model path', default='single', choices=['multi', 'single'])
-    parser.add_argument('-f', '--output_file', type=str, default='output.json')
-    parser.add_argument('-o', '--output_image_path', type=str, default='output.jpg', help='output image\'s name')
+    parser.add_argument('-i', '--input_image_path', type=str, help='input image name')
+    parser.add_argument('-o', '--output_image_path', type=str, default='output.jpg', help='output image name')
+
+    parser.add_argument('-l', '--imglist', type=str, default=None, help='image path list')
+    parser.add_argument('-f', '--output_file', type=str, default='output.json', help='prediction saving files')
     args = parser.parse_args()
     return args
 
@@ -164,7 +165,7 @@ def main():
         if opt.refine_model_path != None:
             people = refinement(img, people, refine_func)
         for i in people:
-            i['image_path'] = img_path
+            i['image_path'] = img_path.strip()
         preds.append(people)
 
     if opt.output_file is not None:
