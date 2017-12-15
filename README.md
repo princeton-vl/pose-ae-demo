@@ -8,6 +8,8 @@ Alejandro Newell, Zhiao Huang, and Jia Deng,
 
 Pretrained models are available [here](https://umich.box.com/s/zm6iapt00k6wbgihq39don57sfvkahlj). Include the models in the main directory of this repository to run the demo code.
 
+**Update (12/15):** PyTorch training code is now available: https://github.com/umich-vl/pose-ae-train
+
 To run the code, the following must be installed:
 
 - Python3
