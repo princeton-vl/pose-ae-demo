@@ -6,7 +6,7 @@ Alejandro Newell, Zhiao Huang, and Jia Deng,
 **Associative Embedding: End-to-End Learning for Joint Detection and Grouping**, 
 [arXiv:1611.05424](https://arxiv.org/abs/1611.05424v2), 2016.
 
-Pretrained models are available [here](https://umich.box.com/s/zm6iapt00k6wbgihq39don57sfvkahlj). Include the models in the main directory of this repository to run the demo code.
+Pretrained models are available [here](https://umich.box.com/s/ic7953g3dcpf9snuuw5yhx67vx88zfrp). Include the models in the main directory of this repository to run the demo code.
 
 **Update (12/15):** PyTorch training code is now available: https://github.com/umich-vl/pose-ae-train
 
